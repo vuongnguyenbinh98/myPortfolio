@@ -1,0 +1,656 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background: #111;
+}
+.boxcenter {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    float: left;
+    width: 100%;
+
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+header.sticky {
+    background-color: #4070f4;
+    padding: 20px 100px;
+}
+.top {
+    width: 100%;
+    position: absolute;
+    top: 5%;
+    left: 0;
+}
+.top.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(64, 122, 244, 0.9);
+
+    padding: 20px 0;
+    z-index: 200;
+    transition: 0.5;
+}
+.top.sticky .logo {
+    color: black;
+    font-weight: 500;
+}
+.top.sticky ul li {
+    margin-top: 15px;
+}
+.top.sticky ul li a {
+    color: black;
+}
+.top .toggle.active {
+    background: url("./close.png");
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.top .toggle {
+    position: fixed;
+    top: 15px;
+    right: 7%;
+    width: 40px;
+    height: 40px;
+    background: url("./menu.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0;
+}
+.logo {
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 10px;
+    color: white;
+}
+nav {
+    float: right;
+    position: absolute;
+    top: 2%;
+    right: 10%;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    height: 20px;
+    background: none;
+}
+ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    padding: 0px 20px;
+}
+ul li a:hover {
+    color: #4070f4;
+}
+.banner h2 {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+
+    font-size: 4rem;
+    color: white;
+
+    line-height: 100px;
+    z-index: 4;
+}
+
+.videoBx video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.videoSmall {
+    position: absolute;
+    background: #fff;
+    top: 30%;
+    right: 8%;
+
+    width: 500px;
+    height: 50%;
+}
+.videoSmall video {
+    object-fit: cover;
+}
+.videoSmallBx {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+/* About */
+.about {
+    float: left;
+    width: 100%;
+    min-height: 760px;
+    position: relative;
+    background: white;
+}
+.about h2 {
+    text-align: center;
+    padding: 30px;
+    font-size: 3rem;
+    color: #4070f4;
+}
+.about {
+    float: left;
+    width: 100%;
+}
+.video_aboutBx {
+    position: absolute;
+
+    top: 20%;
+    left: 20%;
+
+    width: 400px;
+    height: 550px;
+
+    z-index: 1;
+}
+.video_aboutBx video {
+    object-fit: cover;
+}
+.aboutBx {
+    float: left;
+    width: 48%;
+    min-height: 400px;
+    margin: 1%;
+}
+.aboutBx h3 {
+    text-align: left;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+    padding-left: 10%;
+    font-size: 30px;
+    color: #4070f4;
+}
+.aboutBx p {
+    font-size: 25px;
+    color: black;
+    padding-left: 10%;
+}
+.aboutBx::after {
+    content: "";
+    width: 400px;
+    height: 550px;
+
+    position: absolute;
+    top: 15%;
+    left: 21%;
+
+    border: 10px solid gray;
+}
+/* skills */
+.skills {
+    float: left;
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+}
+.skills h2 {
+    text-align: center;
+    padding-top: 28px;
+    font-size: 3rem;
+    color: #4070f4;
+}
+.skills_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    width: 60%;
+    margin: 0 auto;
+
+    position: relative;
+    cursor: pointer;
+}
+.skills_items {
+    width: 250px;
+    height: 150px;
+
+    border-radius: 25px 0;
+    background-color: #eee;
+    margin: 20px 0;
+
+    background: rgba(0, 0, 0, 0.1);
+}
+.skills_items i {
+    float: left;
+
+    font-size: 100px;
+    padding: 6% 30%;
+}
+.skills_video::before {
+    position: absolute;
+    content: "";
+    top: 3%;
+    left: 1%;
+    width: 95%;
+    height: 90%;
+
+    border: 10px solid white;
+    z-index: -1.1;
+}
+.bxl-html5 {
+    color: red;
+}
+.bxl-css3 {
+    color: royalblue;
+}
+.bxl-javascript {
+    color: yellow;
+}
+.bxl-react {
+    color: blue;
+}
+.skills_content h3 {
+    text-align: center;
+    font-size: 25px;
+
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.skills_items:hover h3 {
+    transform: translateY(-23px);
+    padding-left: 10px;
+    opacity: 1;
+
+    color: white;
+}
+.skills_items:hover i {
+    color: black;
+    font-size: 110px;
+
+    transition: 0.2s ease-in-out;
+    margin-right: 10px;
+}
+.skills_videoBx {
+    width: 100%;
+    height: 600px;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.skills_videoBx video {
+    object-fit: cover;
+}
+
+/* Contact */
+
+.contact {
+    float: left;
+    width: 100%;
+    min-height: 600px;
+
+    background-color: white;
+    position: relative;
+}
+.contact h2 {
+    text-align: center;
+    color: #4070f4;
+    margin-top: 30px;
+    font-size: 40px;
+}
+.contact_form {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 40%;
+    margin: 0 auto;
+}
+.contact_input {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid black;
+}
+.contact_form input[type="text"] {
+    font-size: 20px;
+    padding-left: 10px;
+
+    font-weight: bold;
+}
+.contact_area {
+    border-radius: 10px;
+    margin: 20px 0;
+    outline: none;
+    border: 2px solid black;
+}
+.contact_btn {
+    width: 200px;
+    height: 50px;
+}
+.button {
+    margin-left: 66%;
+    border-radius: 10px;
+    border: 2px solid #4070f4;
+}
+.contact_form input[type="button"] {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background-color: #4070f4;
+}
+
+.contact_line::before {
+    position: absolute;
+    content: "";
+    top: 3%;
+    left: 1%;
+    width: 95%;
+    height: 90%;
+
+    border: 10px solid black;
+    z-index: -1.1;
+}
+
+/* footer */
+.footer {
+    float: left;
+    width: 100%;
+    min-height: 100px;
+}
+.footer_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+.footer_social i {
+    font-size: 40px;
+    padding: 0 20px;
+}
+.footer h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: #4070f4;
+}
+.footer p {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    padding-bottom: 20px;
+}
+.bxl-facebook-circle {
+    color: white;
+}
+.bxl-instagram-alt {
+    color: white;
+}
+.bx-mail-send {
+    color: white;
+}
+
+@media screen and (max-width: 1300px) {
+    .video_aboutBx {
+        left: 15%;
+        width: 350px;
+        height: 450px;
+        transition: 0.5s;
+    }
+    .about h2 {
+        font-size: 30px;
+    }
+    .aboutBx {
+        float: left;
+        width: 48%;
+        min-height: 400px;
+        margin: 1%;
+        transition: 0.5;
+    }
+    .aboutBx h3 {
+        font-size: 25px;
+    }
+    .aboutBx p {
+        font-size: 20px;
+    }
+    .aboutBx::after {
+        width: 320px;
+        height: 420px;
+        top: 15%;
+        left: 19%;
+        transition: 0.5s ease-out;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .top .toggle {
+        opacity: 1;
+        z-index: 1000;
+    }
+    .top .toggle.active {
+        background: url("./close.png");
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        opacity: 1;
+
+        transition: 0.7s;
+    }
+    .navigation.active nav {
+        opacity: 1;
+        transition: 0.8s ease-in-out;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 100%;
+        background-color: black;
+        z-index: 999;
+        opacity: 0;
+    }
+    ul li {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        width: 70%;
+        margin: 0 auto;
+
+        padding: 40px 0;
+    }
+    ul li a {
+        margin: 40px 0;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .banner h2 {
+        font-size: 3rem;
+        transition: 0.5s;
+    }
+    .video_aboutBx {
+        left: 10%;
+
+        width: 350px;
+        height: 450px;
+        transition: 0.5s;
+    }
+    .about h2 {
+        font-size: 30px;
+    }
+    .aboutBx {
+        float: left;
+        width: 48%;
+        min-height: 400px;
+        margin: 1%;
+    }
+    .aboutBx h3 {
+        text-align: left;
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+        padding-left: 50px;
+        font-size: 30px;
+        color: #4070f4;
+    }
+    .aboutBx p {
+        font-size: 20px;
+        color: black;
+        padding-left: 50px;
+    }
+    .skills h2 {
+        font-size: 30px;
+    }
+    .contact h2 {
+        font-size: 30px;
+    }
+    .aboutBx::after {
+        width: 320px;
+        height: 420px;
+        top: 15%;
+        left: 16%;
+        transition: 0.5s ease-out;
+    }
+    .contact_form {
+        width: 80%;
+    }
+    .skills_content {
+        width: 90%;
+    }
+    .skills_items {
+        width: 200px;
+        height: 130px;
+
+        border-radius: 25px 0;
+        background-color: #eee;
+        margin: 20px 0;
+
+        background: rgba(0, 0, 0, 0.1);
+    }
+    .skills_items i {
+        float: left;
+
+        font-size: 100px;
+        padding: 6% 30%;
+    }
+    .top.sticky ul li a {
+        color: white;
+    }
+}
+@media screen and (max-width: 768px) {
+    .video_aboutBx {
+        left: 20%;
+        top: 15%;
+        width: 350px;
+        height: 350px;
+        transition: 0.5s;
+    }
+
+    .about h2 {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .aboutBx h3 {
+        font-size: 25px;
+    }
+    .aboutBx p {
+        font-size: 20px;
+    }
+    .aboutBx::after {
+        left: 29%;
+        top: 10%;
+        transition: 0.5s ease-out;
+        height: 330px;
+    }
+    .aboutBx {
+        width: 100%;
+        margin: 0;
+    }
+    .aboutBx h3 {
+        position: absolute;
+        top: 46%;
+        left: 10%;
+    }
+    .aboutBx p {
+        font-size: 20px;
+
+        position: absolute;
+        top: 65%;
+        left: 10%;
+    }
+    .skills_content {
+        grid-template-columns: 1fr 1fr;
+        width: 60%;
+    }
+    .skills_items {
+        width: 200px;
+        height: 130px;
+    }
+    .skills_items i {
+        font-size: 70px;
+    }
+
+    .skills_items:hover h3 {
+        transform: translateY(-20px);
+
+        font-size: 20px;
+    }
+    .skills_items:hover i {
+        font-size: 85px;
+    }
+
+    .contact {
+        float: left;
+        width: 100%;
+        min-height: 600px;
+
+        background-color: white;
+        position: relative;
+    }
+    .contact h2 {
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    .contact_form {
+        width: 50%;
+    }
+    .contact_input {
+        width: 100%;
+        height: 50px;
+        margin: 20px 0;
+        border-radius: 10px;
+        outline: none;
+        border: 2px solid black;
+    }
+
+    .contact_btn {
+        width: 150px;
+        height: 50px;
+    }
+    .button {
+        margin-left: 50%;
+    }
+}

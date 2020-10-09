@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <header id="home">
+        
+        <div class="top"  >
+            <div class="boxcenter header_sticky" >
+                <div class="logo">Nguyen Binh</div>
+                <div class="navigation " onclick="navi()">
+                <nav >
+                    <ul id="nav-menu">
+                        <li><a href="#home" class="nav_link">Home</a></li>
+                        <li><a href="#about" class="nav_link">About Me</a></li>
+                        <li><a href="#skills"class="nav_link">Skills</a></li>
+                        <li><a href="#contact"class="nav_link">Contact</a></li>
+                    </ul>
+                    </div>
+                </nav>
+                <div class="toggle" onclick="menuToggle()"></div>
+            </div>
+        </div>
+            <div class="banner">
+                <h2 class="banner_title">
+                    Hi,<br />
+                    I'm Binh <br  />
+                    Web Development
+                </h2>
+            </div>
+        </div>
+        <div class="videoBx">
+            <video width="100%" src="./img_video/video1.mp4" muted autoplay loop type="mp4"></video>
+        </div>
+        <div class="videoSmallBx"></div>
+        <div class="videoSmall">
+            <video width="100%" height="100%" src="./img_video/video1.mp4" muted autoplay loop></video>
+        </div>
+    </header>
+    <section>
+        <div class="about" id="about">
+            <h2 class="about_h2">About Me</h2>
+            <div class="boxcenter">
+                <div class="aboutBx ">
+                    <div class="video_about">
+                        <div class="video_aboutBx">
+                            <video width="100%" height="100%" src="./img_video/video3.mp4" muted autoplay loop></video>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="aboutBx">
+                    <h3 class="about_h3">I'm Binh</h3>
+                    <p class="about_title">
+                        I’m a front-end developer with experience in building web application <br><br>
+                        I love learning new technologies and building valuable application that helps
+                        others with their work. I’m considered a team-player because I like to help other
+                        and tend to work well within the group.
+                        ReactJS
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="skills" id="skills">
+            <div class="skills_video">
+                <div class="skills_videoBx">
+                    <video width="100%" height="100%" src="./img_video/video5.mp4" muted autoplay loop></video>
+                </div>
+            </div>
+            <h2 class="skills_h2">Skills</h2>
+            <div class="skills_content">
+                <div class="skills_items">
+                    <a href="#" ><i class='bx bxl-html5'></i></a>
+                    <h3>HTML5</h3>
+                </div>
+
+                <div class="skills_items">
+                    <a href="#"><i class='bx bxl-css3'></i></a>
+                    <h3>CSS3</h3>
+                </div>
+
+                <div class="skills_items">
+                    <a href="#"><i class='bx bxl-javascript'></i></a>
+                    <h3>JavaSrcipt</h3>
+                </div>
+
+                <div class="skills_items">
+                    <a href="#"><i class='bx bxl-react'></i></a>
+                    <h3>React Js</h3>
+                </div>
+
+                <div class="skills_items">
+                    <a href="#"><i class='bx bxl-redux'></i></a>
+                    <h3>Redux</h3>
+                </div>
+                <div class="skills_items">
+                    <a href="#"><i class='bx bxl-bootstrap'></i></a>
+                    <h3>Bootstrap</h3>
+                </div>
+
+            </div>
+
+            <!-- <div class="skills_content">
+                
+            </div> -->
+        </div>
+
+        <div class="contact" id="contact">
+            <h2 class="contact_h2">Contact</h2>
+            <div class="contact_line"></div>
+            <div class="contact_content ">
+                <form action="" class="contact_form">
+                    <input type="text" placeholder="Name" class="contact_input">
+                    <input type="text" placeholder="Email" class="contact_input">
+                    <textarea name="" id="" cols="30" rows="10" class="contact_area"></textarea>
+                    <input type="button" value="submit" class="contact_btn button">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 >Binh</h2>
+        <div class="footer_social">
+          <a href="" class="footer_icon"><i class='bx bxl-facebook-circle' ></i></a>
+          <a href="" class="footer_icon"><i class='bx bxl-instagram-alt' ></i></a>
+          <a href="" class="footer_icon"><i class='bx bx-mail-send' ></i></a>
+        </div>
+        <p><i class='bx bx-copyright' ></i>, 2020 copyright all right reserved</p>
+      </footer>
+ 
+      <!-- SCroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- main js -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
